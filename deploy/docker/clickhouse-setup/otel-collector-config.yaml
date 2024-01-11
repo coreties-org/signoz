@@ -123,7 +123,7 @@ exporters:
   # logging: {}
 
   clickhouselogsexporter:
-    dsn: tcp://clickhouse:9000/
+    dsn: tcp://clickhouse:9000/?username=default&password=EXsPgjgrDWWqsKEW
     docker_multi_node_cluster: ${DOCKER_MULTI_NODE_CLUSTER}
     timeout: 5s
     sending_queue:
