@@ -234,14 +234,6 @@ services:
       - coreties_coreties
     command:
       - "--dsn=tcp://clickhouse:9000"
-    depends_on:
-      clickhouse:
-        condition: service_healthy
-      # clickhouse-2:
-      #   condition: service_healthy
-      # clickhouse-3:
-      #   condition: service_healthy
-
 
   otel-collector:
     image: signoz/signoz-otel-collector:${OTELCOL_TAG:-0.88.6}
@@ -278,8 +270,6 @@ services:
       # - "55679:55679"   # zPages extension
     restart: on-failure
     depends_on:
-#      clickhouse:
-#        condition: service_healthy
       otel-collector-migrator:
         condition: service_completed_successfully
       query-service:
