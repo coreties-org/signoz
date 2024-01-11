@@ -52,7 +52,7 @@ extensions:
 
 exporters:
   clickhousemetricswrite:
-    endpoint: tcp://clickhouse:9000/?database=signoz_metrics&password=EXsPgjgrDWWqsKEW
+    endpoint: tcp://clickhouse:9000/?database=signoz_metrics&username=default&password=EXsPgjgrDWWqsKEW
 
 service:
   telemetry:
