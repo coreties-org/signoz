@@ -223,7 +223,6 @@ services:
       - traefik.http.services.signoz.loadbalancer.server.port=3301
       - traefik.http.routers.signoz.entrypoints=websecure
       - traefik.http.routers.signoz.rule=Host(`signoz.coreties.com`)
-      - traefik.http.routers.signoz.service=frontend
       - traefik.http.routers.signoz.middlewares=authelia@docker
       - traefik.docker.network=netmaker_default
     volumes:
