@@ -233,7 +233,7 @@ services:
     networks:
       - coreties_coreties
     command:
-      - "--dsn=tcp://clickhouse:9000?password=EXsPgjgrDWWqsKEW"
+      - "--dsn=tcp://default:EXsPgjgrDWWqsKEW@clickhouse:9000"
 
   otel-collector:
     image: signoz/signoz-otel-collector:${OTELCOL_TAG:-0.88.6}
