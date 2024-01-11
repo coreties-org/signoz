@@ -109,15 +109,15 @@ extensions:
 
 exporters:
   clickhousetraces:
-    datasource: tcp://clickhouse:9000/?database=signoz_traces
+    datasource: tcp://clickhouse:9000/?database=signoz_traces&password=EXsPgjgrDWWqsKEW
     docker_multi_node_cluster: ${DOCKER_MULTI_NODE_CLUSTER}
     low_cardinal_exception_grouping: ${LOW_CARDINAL_EXCEPTION_GROUPING}
   clickhousemetricswrite:
-    endpoint: tcp://clickhouse:9000/?database=signoz_metrics
+    endpoint: tcp://clickhouse:9000/?database=signoz_metrics&password=EXsPgjgrDWWqsKEW
     resource_to_telemetry_conversion:
       enabled: true
   clickhousemetricswrite/prometheus:
-    endpoint: tcp://clickhouse:9000/?database=signoz_metrics
+    endpoint: tcp://clickhouse:9000/?database=signoz_metrics&password=EXsPgjgrDWWqsKEW
   prometheus:
     endpoint: 0.0.0.0:8889
   # logging: {}
